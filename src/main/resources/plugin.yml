@@ -1,0 +1,35 @@
+name: Login_Amturester
+version: '1.0-SNAPSHOT'
+main: com.amturester.login.LoginPlugin
+api-version: '1.21'
+
+commands:
+  register:
+    description: 注册账号
+    aliases: [reg, 注册]
+    usage: /register <密码> <确认密码>
+  login:
+    description: 登录账号
+    aliases: [登录]
+    usage: /login <密码>
+  l:
+    description: 管理员命令组
+    usage: |
+      /l blacklist ip add <IP> - 将IP加入黑名单
+      /l blacklist ip remove <IP> - 将IP移出黑名单
+      /l blacklist ip list - 查看IP黑名单
+      /l blacklist id add <玩家名> - 将玩家加入黑名单（需已注册）
+      /l blacklist id remove <玩家名> - 将玩家移出黑名单
+      /l blacklist id list - 查看ID黑名单
+      /l list - 查看所有已注册玩家
+      /l pw <玩家名> <密码> - 校验玩家密码
+      /l reset <玩家名> <新密码> - 重置玩家密码
+    permission: login.use
+
+permissions:
+  login.admin:
+    description: 允许使用所有 /l 子命令
+    default: op
+  login.use:
+    description: 允许使用 /l 命令（但黑名单等子命令仍需管理员权限）
+    default: true
