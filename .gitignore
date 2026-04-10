@@ -1,0 +1,29 @@
+# Compiled files
+*.class
+build/
+out/
+
+# Gradle
+.gradle/
+gradle-app.setting
+!gradle-wrapper.jar
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+.vscode/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Plugin specific
+playerdata.db
+*.db
+logs/
+config.yml
